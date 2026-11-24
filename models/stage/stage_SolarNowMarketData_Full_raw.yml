@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stage_SolarNowMarketData_Full_raw
+    description: > 
+      Clean and standardized SolarNowMarket data.
+      The grain is one row per street engery consumption in Netherlands.
+
+    columns:
+      - name: net_manager
+        description: "Name of the regional network manager."
+
+      - name: purchase_area
+        description: "Distributor's location"
+
+      - name: street
+        description: "Name of the street location."
+
+      - name: zipcode
+        description: "2 columns for the range of zip codes covered, 4 numbers and 2 letters."
+
+      - name: city
+        description: "Name of the city."
+
+      - name: delivery_pct
+        description: "Percentage of the net consumption of electricity or gas. The lower, the more energy was given back to the grid (for example if you have solar panels)"
+
+      - name: pct_of_active_connections
+        description: "Percentage of active connections in the geographical zip code area."
+
+      - name: type_conn_pct
+        description: "Percentage of presence of the principal type of connection in the zip code range."
+
+      - name: type_of_connection
+        description: "Percentage of presence of the principal type of connection in the zip code range."
+
+      - name: annual_consume
+        description: >-
+          The "principal type connection" describes the the main way electrical power is delivered and used in a specific geographical zip code area. 
+          Example: "# fuses X # ampère" specifies the number of fuses and their amperage, such as "2 fuses X 40 ampère.
+
+      - name: annual_consume_lowtarif_pct
+        description: "Annual energy consumption in kilowatt-hours (kWh) for electricity or cubic meters (m3) for gas."
+
+      - name: smartmeter_pct
+        description: "Percentage of energy consumption during low tariff hours, typically from 10 p.m. to 7 a.m. and weekends. *Not provided by every network manager"
+
+      - name: num_connection
+        description: >-
+          Percentage of smart meters in the specified zip code ranges, indicating the level of advanced metering technology adoption.
+          * Note: A Smart meter is an advanced metering device that is used to measure and record the consumption of 
+          electricity or gas in a more sophisticated and automated way compared to traditional meters
+
+      - name: year
+        description: "The year of the data point, indicating when the information was collected or recorded."

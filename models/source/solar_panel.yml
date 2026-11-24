@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: solar_panel
+    description: "Solarnow data"
+    database: workspace
+    schema: dbt
+    tables:
+      - name: resident_household_data_raw
+      - name: SolarNowMarketData_Full_raw
+      - name: SolarNowMarketData_Subset_raw

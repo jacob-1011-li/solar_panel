@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: stage_resident_household_data_raw
+    description:  >
+      Clean and standardized resident household data.
+      The grain is one row per house holder.
+
+    columns:
+      - name: zipcode
+        description: "The postal code assigned to a specific geographical area within the Netherlands."
+        tests:
+          - not_null
+          - unique
+          
+      - name: total_occupants
+        description: "The total number of individuals residing in the specified area"
+
+      - name: male_occupants
+        description: "The number of male individuals among the total occupants."
+
+      - name: female_occupants
+        description: "The number of female individuals among the total occupants"
+
+      - name: occupants_aged_below_15yrs
+        description: "The count of occupants aged below 15 years."
+
+      - name: occupants_aged_25_to_45_yrs
+        description: "The count of occupants aged between 15 and 25 years."
+
+      - name: occupants_aged_25_to_45_yrs
+        description: "The count of occupants aged between 25 and 45 years."
+
+      - name: occupants_aged_45_to_65_yrs
+        description: "The count of occupants aged between 45 and 65 years."
+
+      - name: occupants_aged_above_65yrs
+        description: "The count of occupants aged 65 years and above."
+
+      - name: total_number_of_households
+        description: "The overall count of households within the specified area."
+
+      - name: number_of_one-persons_households
+        description: "The count of households with only one person."
+
+      - name: number_of_multi-person_nochildren_households
+        description: "The count of households with multiple occupants and no children."
+
+      - name: number_of_single-parent_households
+        description: "The count of households headed by a single parent."
+
+      - name: number_of_two-parent_households
+        description: "The count of households headed by two parents."
+
+      - name: total_number_of_homes
+        description: "The total count of residential property homes within the specified area."
+
+      - name: number_of_homes_build_year_pre_1945
+        description: "The count of homes built before the year 1945."
+
+      - name: number_of_homes_build_year_1945_to_1965
+        description: "The count of homes built between 1945 and 1965."
+
+      - name: number_of_homes_build_year_1965_to_1975
+        description: "The count of homes built between 1965 and 1975."
+
+      - name: number_of_homes_build_year_1975_to_1985
+        description: "The count of homes built between 1975 and 1985."
+
+      - name: umber_of_homes_build_year_1985_to_1995
+        description: "The count of homes built between 1985 and 1995."
+
+      - name: number_of_homes_build_year_1995_to_2005
+        description: "The count of homes built between 1995 and 2005."
+
+      - name: number_of_homes_build_year_2005_to_2015
+        description: "The count of homes built between 2005 and 2015."
+
+      - name: number_of_homes_build_year_post_2015
+        description: "The count of homes built after the year 2015."
+
+      - name: pct_owner_occupied_property
+        description: "The percentage of residential properties that are owner-occupied."
+
+      - name: pct_rental_property
+        description: "The percentage of residential properties that are rental properties."
+
+      - name: number_of_not_occupied_property
+        description: "The count of residential properties that are currently not occupied."
+
+      - name: average_woz_household_value_in_kEUR
+        description: "The average estimated value of residential properties for the specified area in thousands of euros (kEUR)."
