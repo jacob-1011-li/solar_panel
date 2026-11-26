@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stage_SolarNowMarketData_Full_raw
+  - name: stage_SolarNowMarketData_Subset_raw
     description: > 
       Clean and standardized SolarNowMarket data.
       The grain is one row per street engery consumption in Netherlands.

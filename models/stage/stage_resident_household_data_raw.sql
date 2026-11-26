@@ -92,4 +92,3 @@ rename_and_casted as(
 
 select *
 from rename_and_casted
-limit 10

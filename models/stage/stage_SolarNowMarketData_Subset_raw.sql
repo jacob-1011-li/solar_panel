@@ -14,7 +14,7 @@ rename_and_casted as (
         try_cast(`perc_of_active_connections` as decimal(10,4)) as pct_of_active_connections,
         try_cast(`type_conn_perc` as decimal(10,4)) as type_conn_pct,
         nullif(trim(`type_of_connection`), '') as type_of_connection,
-        try_cast(`annual_consume` as int) as annual_consume,
+        try_cast(`annual_consume` as decimal(10,4)) as annual_consume,
         try_cast(`annual_consume_lowtarif_perc` as decimal(10,4)) as annual_consume_lowtarif_pct,
         try_cast(`smartmeter_perc` as decimal(10,4)) as smartmeter_pct,
         try_cast(`num_connections` as int) as num_connection,
@@ -25,4 +25,3 @@ rename_and_casted as (
 
 select *
 from rename_and_casted
-limit 10
