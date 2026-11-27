@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_delivery_score
+    description: City-level energy delivery score.
+
+    columns:
+      - name: city
+        description: City name.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: delivery_score
+        description: Household-weighted delivery score.
+
+      - name: total_households
+        description: Households participating in scoring.
+
+      - name: weighted_score_sum
+        description: Total household-weighted score.
+
+      - name: total_zipcode_count
+        description: Total mapped postcodes.
+
+      - name: scored_zipcode_count
+        description: Postcodes participating in scoring.
+
+      - name: mapped_households
+        description: Total mapped households.
+
+      - name: incomplete_history_zipcode_count
+        description: Scored postcodes with incomplete historical data.
+
+      - name: zipcode_score_coverage
+        description: Proportion of mapped postcodes scored.
+
+      - name: household_score_coverage
+        description: Proportion of mapped households scored.

@@ -22,7 +22,7 @@ rename_and_casted as(
             as occupants_aged_below_15yrs,
 
         try_cast(`occupants_aged_15_to_25_yrs` as int)
-            as occupants_aged_below_15_to_25yrs,
+            as occupants_aged_15_to_25yrs,
 
         try_cast(`occupants_aged_25_to_45_yrs` as int)
             as occupants_aged_25_to_45_yrs,

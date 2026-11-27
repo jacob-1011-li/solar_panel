@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_property_value_score
+    description: City-level property value and construction year score.
+
+    columns:
+      - name: city
+        description: City name.
+        data_tests:
+          - not_null
+          - unique
+
+      - name: property_value_score
+        description: Household-weighted property value score adjusted by construction year.
+
+      - name: total_households
+        description: Households participating in scoring.
+
+      - name: weighted_score_sum
+        description: Total household-weighted score.
+
+      - name: total_zipcode_count
+        description: Total mapped postcodes.
+
+      - name: scored_zipcode_count
+        description: Postcodes participating in scoring.
+
+      - name: mapped_households
+        description: Total mapped households.
+
+      - name: incomplete_construction_data_zipcode_count
+        description: Scored postcodes with incomplete construction year data.
+
+      - name: zipcode_score_coverage
+        description: Proportion of mapped postcodes scored.
+
+      - name: household_score_coverage
+        description: Proportion of mapped households scored.

@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: int_Combined_SolarNowMarketData
+    description: Combined energy data at postcode and year level.
+
+    columns:
+      - name: zipcode
+        description: Postcode.
+        data_tests:
+          - not_null
+
+      - name: city
+        description: City name.
+
+      - name: year
+        description: Energy data reporting year.
+        data_tests:
+          - not_null
+
+      - name: avg_annual_consume_per_connection
+        description: Average annual consumption per connection.
+
+      - name: delivery_pct
+        description: Delivery percentage.
+
+      - name: smartmeter_pct
+        description: Smart meter adoption percentage.
+
+      - name: covered_connection_count
+        description: Total covered connections.
+
+      - name: pct_of_active_connections
+        description: Percentage of active connections.
+
+      - name: annual_consume_lowtarif_pct
+        description: Low tariff consumption percentage.
